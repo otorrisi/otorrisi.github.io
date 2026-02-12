@@ -186,6 +186,45 @@
       .grid{ grid-template-columns:1fr; }
       .hero h1{ font-size:2.2rem; }
     }
+
+    .site-footer{
+  margin-top:80px;
+  padding:40px 20px;
+  background:#f3f4f6;
+  border-top:1px solid var(--border);
+}
+
+.footer-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.footer-logos{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.footer-logos img{
+  height:60px;
+  width:auto;
+}
+
+.footer-contacts h3{
+  margin:0 0 10px 0;
+  font-size:1rem;
+}
+
+.footer-contacts p{
+  margin:6px 0;
+  font-size:0.9rem;
+  color:#374151;
+}
+
   </style>
 </head>
 
@@ -193,7 +232,6 @@
 
   <nav class="nav" aria-label="Primary">
     <div class="nav-inner">
-      <strong>Orsola Torrisi</strong>
       <div class="menu">
         <a href="#home">Home</a>
         <a href="#publications">Publications</a>
@@ -290,17 +328,34 @@
 
         <p id="contact"></p>
 
-        <p>Slava Ukraïni!</p>
+                <p>Slava Ukraïni!</p>
 
       </section>
-
     </div>
   </main>
 
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-logos">
+        <img src="assets/mcgill.png" alt="McGill University">
+        <img src="assets/lse.png" alt="LSE">
+      </div>
+
+      <div class="footer-contacts">
+        <h3>Contacts</h3>
+        <p>
+          <a href="mailto:orsola.torrisi@mcgill.ca">orsola.torrisi@mcgill.ca</a>
+          McGill University, McTavish Street, Montreal H3A 0G4
+        </p>
+        <p>
+          <a href="mailto:o.torrisi@lse.ac.uk">o.torrisi@lse.ac.uk</a>
+          London School of Economics, Houghton Street, London WC2A 2AE
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
 </body>
 </html>
-
-
-</body>
-</html>
-
