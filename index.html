@@ -110,10 +110,11 @@
 
     /* Main layout */
     .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:50px 20px 100px 20px;
-    }
+  max-width:var(--max);
+  margin:0 auto;
+  padding:50px 20px 40px 20px;
+}
+
     .grid{
       display:grid;
       grid-template-columns:380px 1fr;
@@ -187,9 +188,9 @@
       .hero h1{ font-size:2.2rem; }
     }
 
-    .site-footer{
-  margin-top:80px;
-  padding:40px 20px;
+.site-footer{
+  margin-top:30px;
+  padding:30px 20px;
   background:#f3f4f6;
   border-top:1px solid var(--border);
 }
@@ -198,32 +199,27 @@
   max-width:var(--max);
   margin:0 auto;
   display:flex;
-  align-items:center;
-  gap:60px;
+  align-items:flex-start;
+  gap:40px;
   flex-wrap:wrap;
 }
 
-.footer-logos{
-  display:flex;
-  gap:30px;
-  align-items:center;
-}
-
 .footer-logos img{
-  height:60px;
+  height:55px;
   width:auto;
 }
 
 .footer-contacts h3{
-  margin:0 0 10px 0;
-  font-size:1rem;
+  margin:0 0 6px 0;
+  font-size:0.95rem;
 }
 
 .footer-contacts p{
-  margin:6px 0;
-  font-size:0.9rem;
-  color:#374151;
+  margin:4px 0;
+  font-size:0.85rem;
+  line-height:1.3;
 }
+
 
   </style>
 </head>
@@ -338,8 +334,8 @@
     <div class="footer-inner">
 
       <div class="footer-logos">
-        <img src="assets/mcgill.png" alt="McGill University">
-        <img src="assets/lse.png" alt="LSE">
+        <img src="assets/mcgill_logo.png" alt="McGill University">
+        <img src="assets/lse_logo.png" alt="LSE">
       </div>
 
       <div class="footer-contacts">
