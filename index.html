@@ -4,88 +4,201 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Orsola Torrisi</title>
-  <meta name="description" content="Assistant Professor of Social Demography at McGill University. Research on the demography of crises and violence, family dynamics, and sexual and reproductive health." />
+  <meta name="description" content="Social demographer. Research on crises, violence, family dynamics, and sexual and reproductive health." />
+
   <style>
     :root{
       --bg:#ffffff;
       --text:#111827;
-      --muted:#4b5563;
-      --link:#1d4ed8;
+      --muted:#6b7280;
+      --nav:#ffffff;
+      --navtext:#111827;
+      --card:#ffffff;
       --border:#e5e7eb;
-      --max:860px;
+      --button:#2b6cb0;
+      --buttontext:#ffffff;
+      --max:1080px;
     }
-    html, body { height: 100%; }
+
+    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
     }
+
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    /* Top nav */
+    .nav{
+      position:fixed;
+      top:0; left:0; right:0;
+      z-index:50;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:saturate(180%) blur(10px);
+      border-bottom:1px solid rgba(229,231,235,0.6);
+    }
+    .nav-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand{
+      font-weight:600;
+      letter-spacing:0.02em;
+      white-space:nowrap;
+    }
+    .menu{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      font-size:0.95rem;
+      color:var(--navtext);
+    }
+    .menu a{
+      opacity:0.9;
+    }
+    .menu a:hover{
+      opacity:1;
+    }
+
+    /* Hero */
+    .hero{
+      min-height:52vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#ffffff;
+      padding:110px 18px 60px 18px; /* space for fixed nav */
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("assets/hero.jpg") center/cover no-repeat;
+    }
+    .hero h1{
+      margin:0 0 8px 0;
+      font-size:3rem;
+      letter-spacing:-0.02em;
+    }
+    .hero .subtitle{
+      margin:0;
+      font-size:1.25rem;
+      font-weight:600;
+    }
+    .hero .affil{
+      margin-top:12px;
+      font-size:1rem;
+      opacity:0.95;
+      font-weight:600;
+    }
+
+    /* Main section */
     .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 48px 20px;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:34px 18px 70px 18px;
     }
-    header{
-      margin-bottom: 28px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--border);
+    .divider{
+      height:1px;
+      background:var(--border);
+      margin:28px 0;
     }
-    h1{
-      margin: 0 0 6px 0;
-      font-size: 2rem;
-      letter-spacing: -0.02em;
+    .grid{
+      display:grid;
+      grid-template-columns: 380px 1fr;
+      gap:36px;
+      align-items:start;
     }
-    .subtitle{
-      margin: 0;
-      color: var(--muted);
-      font-size: 1rem;
+
+    /* Left column card */
+    .card{
+      background:var(--card);
     }
-    main p{
-      margin: 0 0 14px 0;
-      color: var(--text);
+    .profile{
+      width:100%;
+      aspect-ratio: 1 / 1;
+      object-fit:cover;
+      border-radius:2px;
+      border:1px solid var(--border);
+      display:block;
     }
-    footer{
-      margin-top: 34px;
-      padding-top: 18px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.95rem;
+    .cv-btn{
+      margin-top:14px;
+      display:block;
+      width:100%;
+      text-align:center;
+      padding:12px 14px;
+      background:var(--button);
+      color:var(--buttontext);
+      border-radius:4px;
+      font-weight:600;
     }
-    a{ color: var(--link); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
+    .icons{
+      margin-top:14px;
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      color:#374151;
+    }
+    .icon{
+      width:22px; height:22px;
+      display:inline-block;
+    }
+    .icons a:hover{ text-decoration:none; opacity:0.85; }
+
+    /* Right column text */
+    h2{
+      margin:0 0 10px 0;
+      font-size:1.1rem;
+      letter-spacing:0.01em;
+    }
+    p{
+      margin:0 0 14px 0;
+      color:#1f2937;
+    }
+    .muted{
+      color:var(--muted);
+    }
+    section{
+      scroll-margin-top:90px;
+    }
+
+    /* Responsive */
+    @media (max-width: 880px){
+      .grid{ grid-template-columns: 1fr; }
+      .hero h1{ font-size:2.2rem; }
+      .menu{ gap:12px; }
+    }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Hello</h1>
-      <p class="subtitle">Thank you for visiting my website.</p>
-    </header>
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <div class="brand">Orsola TORRISI</div>
+      <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#publications">Publications</a>
+        <a href="#research">Research in progress</a>
+        <a href="#applied">Applied research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contacts">Contacts</a>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-      <p>
-        I am an Assistant Professor of Social Demography in the Department of Sociology at McGill University and a member of McGill's Centre for Population Dynamics. Previously, I was a Postdoctoral Associate in the Social Science Division at New York University Abu Dhabi (NYUAD).
-      </p>
-
-      <p>
-        My research focuses on the demography of crises and violence. I am particularly interested in understanding changes in family dynamics in contexts affected by armed violence and disasters, as well as the impact of crises on sexual and reproductive health outcomes. One other focus I have within this line of research is on the consequences of exposure to armed violence on other forms of violence in private and public settings, including intimate partner violence and obstetric abuse. More recently, I started to work on topics related to measurement, vital registration and the development of new data collection methods to measure demographic outcomes where data are scarce.
-      </p>
-
-      <p>
-        My work is interdisciplinary. I combine theoretical approaches from demography, sociology, economics, and development studies with standard demographic, causal and spatial methods. I focus largely on low- and middle-income settings.
-      </p>
-    </main>
-
-    <footer>
-      <span>© <span id="year"></span> Orsola Torrisi</span>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+  <header class="hero" id="home">
+    <div>
+      <h1>Orsola Torrisi</h1>
+      <p class="subtitle">Social demographer</p>
+      <div class="affil">
+        McGill University
