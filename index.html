@@ -1,224 +1,211 @@
 <!doctype html>
 <html lang="en-CA">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Orsola Torrisi</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orsola Torrisi</title>
 
 <style>
-  :root{
-    --bg:#ffffff;
-    --text:#111827;
-    --muted:#6b7280;
-    --border:#e5e7eb;
-    --button:#2b6cb0;
-    --buttontext:#ffffff;
-    --max:1080px;
-  }
+:root{
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --link:#1a56db;
+  --button:#2b6cb0;
+  --buttontext:#ffffff;
+  --max:1100px;
+}
 
-  *{box-sizing:border-box}
+*{box-sizing:border-box}
 
-  body{
-    margin:0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color:var(--text);
-    background:var(--bg);
-    line-height:1.6;
-  }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+}
 
-  /* Links in the main text */
-  main a{
-    color:#1a56db;
-    text-decoration:none;
-  }
-  main a:hover{
-    text-decoration:underline;
-  }
+/* Blue hyperlinks */
+main a{
+  color:var(--link);
+  text-decoration:none;
+}
+main a:hover{
+  text-decoration:underline;
+}
 
-  /* Do not turn buttons/nav into blue links */
-  .cv-btn,
-  .menu a{
-    color:inherit;
-    text-decoration:none;
-  }
+/* Navigation */
+.nav{
+  position:fixed;
+  top:0; left:0; right:0;
+  background:rgba(255,255,255,0.95);
+  border-bottom:1px solid var(--border);
+  z-index:100;
+}
+.nav-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.menu{
+  display:flex;
+  gap:24px;
+}
+.menu a{
+  color:inherit;
+  text-decoration:none;
+}
 
-  /* Navigation */
-  .nav{
-    position:fixed;
-    top:0; left:0; right:0;
-    background:rgba(255,255,255,0.95);
-    border-bottom:1px solid var(--border);
-    z-index:10;
-  }
+/* Hero */
+.hero{
+  min-height:60vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#ffffff;
+  padding:140px 20px 80px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("assets/hero.jpg") center/cover no-repeat;
+}
+.hero h1{
+  margin:0;
+  font-size:3rem;
+}
+.hero .subtitle{
+  margin-top:10px;
+  font-size:1.3rem;
+  font-weight:600;
+}
 
-  .nav-inner{
-    max-width:var(--max);
-    margin:0 auto;
-    padding:12px 18px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:16px;
-  }
+/* Main */
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:50px 20px 100px 20px;
+}
 
-  .menu{
-    display:flex;
-    gap:18px;
-    font-size:0.95rem;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-  }
+.grid{
+  display:grid;
+  grid-template-columns:380px 1fr;
+  gap:50px;
+}
 
-  /* Hero */
-  .hero{
-    min-height:55vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:#ffffff;
-    padding:120px 18px 60px 18px;
-    background:
-      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-      url("assets/hero.jpg") center/cover no-repeat;
-  }
+/* Left column */
+.profile{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border:1px solid var(--border);
+  display:block;
+}
 
-  .hero h1{
-    margin:0 0 8px 0;
-    font-size:3rem;
-  }
+.cv-btn{
+  display:block;
+  margin-top:15px;
+  text-align:center;
+  padding:12px;
+  background:var(--button);
+  color:var(--buttontext);
+  font-weight:600;
+  text-decoration:none;
+}
 
-  .hero .subtitle{
-    font-size:1.25rem;
-    font-weight:600;
-  }
-
-  .wrap{
-    max-width:var(--max);
-    margin:0 auto;
-    padding:40px 18px 80px 18px;
-  }
-
-  .grid{
-    display:grid;
-    grid-template-columns:380px 1fr;
-    gap:40px;
-    align-items:start;
-  }
-
-  .profile{
-    width:100%;
-    aspect-ratio:1/1;
-    object-fit:cover;
-    border:1px solid var(--border);
-    display:block;
-  }
-
-  .cv-btn{
-    margin-top:14px;
-    display:block;
-    text-align:center;
-    padding:12px;
-    background:var(--button);
-    color:var(--buttontext);
-    font-weight:600;
-  }
-
-  h2{ margin-top:0; }
-
-  @media (max-width:900px){
-    .grid{ grid-template-columns:1fr; }
-    .hero h1{ font-size:2.2rem; }
-  }
+/* Responsive */
+@media (max-width:900px){
+  .grid{ grid-template-columns:1fr; }
+  .hero h1{ font-size:2.2rem; }
+}
 </style>
 </head>
 
 <body>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <div><strong>Orsola Torrisi</strong></div>
-      <div class="menu">
-        <a href="#">Home</a>
-        <a href="#">Publications</a>
-        <a href="#">Research</a>
-        <a href="#">Teaching</a>
-        <a href="#">Contact</a>
-      </div>
+<nav class="nav">
+  <div class="nav-inner">
+    <strong>Orsola Torrisi</strong>
+    <div class="menu">
+      <a href="#home">Home</a>
+      <a href="#publications">Publications</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <header class="hero">
-    <div>
-      <h1>Orsola Torrisi</h1>
-      <div class="subtitle">Social demographer</div>
-      <div>McGill University</div>
-    </div>
-  </header>
+<header class="hero" id="home">
+  <div>
+    <h1>Orsola Torrisi</h1>
+    <div class="subtitle">Social demographer</div>
+    <div>McGill University</div>
+  </div>
+</header>
 
-  <main class="wrap">
-    <div class="grid">
+<main class="wrap">
+  <div class="grid">
 
-      <aside>
-        <img class="profile" src="assets/profile.png" alt="Portrait photo" />
-<a class="cv-btn" href="assets/Curriculum_Vitae_TO.pdf" target="_blank">
-      </aside>
+    <aside>
+      <img class="profile" src="assets/profile.png" alt="Portrait">
+      <a class="cv-btn" href="assets/Curriculum_Vitae_TO.pdf" target="_blank">Curriculum Vitae</a>
+    </aside>
 
-<section>
+    <section>
 
-<h2>Hello – Thank you for visiting my website!</h2>
+      <h2>Hello – Thank you for visiting my website!</h2>
 
-<p>
-I am an Assistant Professor of Social Demography in the 
-<a href="https://www.mcgill.ca/sociology/" target="_blank">Department of Sociology</a> 
-at <a href="https://www.mcgill.ca/" target="_blank">McGill University</a> 
-and a member of 
-<a href="https://www.mcgill.ca/popcentre/" target="_blank">McGill's Centre for Population Dynamics</a>. 
-</p>
+      <p>
+      I am an Assistant Professor of Social Demography in the 
+      <a href="https://www.mcgill.ca/sociology/" target="_blank">Department of Sociology</a> 
+      at <a href="https://www.mcgill.ca/" target="_blank">McGill University</a> 
+      and a member of 
+      <a href="https://www.mcgill.ca/cpd/" target="_blank">McGill's Centre for Population Dynamics</a>.
+      </p>
 
-<p>
-My research focuses on the demography of crises and violence. I am particularly interested in understanding changes in family dynamics in contexts affected by armed violence and disasters, as well as the impact of crises on sexual and reproductive health outcomes. One other focus within this line of research concerns the consequences of exposure to armed violence on other forms of violence in private and public settings, including intimate partner violence and obstetric abuse. More recently, I have worked on topics related to measurement, vital registration and the development of new data collection methods to measure demographic outcomes where data are scarce.
-</p>
+      <p>
+      My research focuses on the demography of crises and violence. I am particularly interested in understanding changes in family dynamics in contexts affected by armed violence and disasters, as well as the impact of crises on sexual and reproductive health outcomes. One other focus within this line of research concerns the consequences of exposure to armed violence on other forms of violence in private and public settings, including intimate partner violence and obstetric abuse. More recently, I have worked on topics related to measurement, vital registration and the development of new data collection methods to measure demographic outcomes where data are scarce.
+      </p>
 
-<p>
-My work is interdisciplinary. I combine theoretical approaches from demography, sociology, economics and development studies with standard demographic, causal and spatial methods. I focus largely on low- and middle-income settings.
-</p>
+      <p>
+      My work is interdisciplinary. I combine theoretical approaches from demography, sociology, economics and development studies with standard demographic, causal and spatial methods. I focus largely on low- and middle-income settings.
+      </p>
 
-<p>
-My research has been published in 
-<a href="https://read.dukeupress.edu/demography/article/doi/10.1215/00703370-12319849/405026/The-Consequences-of-Community-Violence-for" target="_blank">Demography</a>, 
-<a href="https://onlinelibrary.wiley.com/doi/10.1111/padr.12359" target="_blank">Population and Development Review</a>, 
-<a href="https://doi.org/10.1016/j.worlddev.2024.106538" target="_blank">World Development</a>, 
-<a href="https://www.science.org/doi/10.1126/sciadv.add9038" target="_blank">Science Advances</a>, 
-<a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jomf.12876" target="_blank">Journal of Marriage and Family</a>, 
-<a href="https://doi.org/10.1177/01979183251359172" target="_blank">International Migration Review</a>, 
-<a href="https://academic.oup.com/ije/article/54/2/dyaf009/8038164" target="_blank">International Journal of Epidemiology</a>, and 
-<a href="https://doi.org/10.1016/j.socscimed.2024.117348" target="_blank">Social Science & Medicine</a>, among others.
-</p>
+      <p>
+      My research has been published in 
+      <a href="https://read.dukeupress.edu/demography/article/doi/10.1215/00703370-12319849/405026/The-Consequences-of-Community-Violence-for" target="_blank">Demography</a>, 
+      <a href="https://onlinelibrary.wiley.com/doi/10.1111/padr.12359" target="_blank">Population and Development Review</a>, 
+      <a href="https://doi.org/10.1016/j.worlddev.2024.106538" target="_blank">World Development</a>, 
+      <a href="https://www.science.org/doi/10.1126/sciadv.add9038" target="_blank">Science Advances</a>, 
+      <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jomf.12876" target="_blank">Journal of Marriage and Family</a>, 
+      <a href="https://doi.org/10.1177/01979183251359172" target="_blank">International Migration Review</a>, 
+      <a href="https://academic.oup.com/ije/article/54/2/dyaf009/8038164" target="_blank">International Journal of Epidemiology</a>, and 
+      <a href="https://doi.org/10.1016/j.socscimed.2024.117348" target="_blank">Social Science & Medicine</a>.
+      </p>
 
-<p>
-In 2025, I was awarded the 
-<a href="https://www.lse.ac.uk/international-development/research/british-society-for-population-studies/awards-and-grants" target="_blank">Anne Shepherd New Investigator/Early Career Award</a> 
-by the British Society for Population Studies.
-</p>
+      <p>
+      In 2025, I was awarded the 
+      <a href="https://www.bsps.org.uk/" target="_blank">Anne Shepherd New Investigator/Early Career Award</a> 
+      by the British Society for Population Studies.
+      </p>
 
-<p>
-I received my Ph.D. in Demography/Population Studies in 2022 from the Department of Social Policy at 
-<a href="https://www.lse.ac.uk/" target="_blank">London School of Economics and Political Science (LSE)</a>. 
-I was an Honorary Visiting Researcher at the 
-<a href="https://cde.wisc.edu/" target="_blank">Center for Demography and Ecology</a> 
-at the University of Wisconsin–Madison, and attended the 2018–19 
-<a href="https://eds-demography.org/" target="_blank">European Doctoral School of Demography</a> 
-at the Max Planck Institute for Demographic Research and the University of Southern Denmark.
-</p>
+      <p>
+      I received my Ph.D. in Demography/Population Studies in 2022 from the 
+      <a href="https://www.lse.ac.uk/" target="_blank">London School of Economics and Political Science (LSE)</a>.
+      </p>
 
-<p>Slava Ukraïni!</p>
+      <p>Slava Ukraïni!</p>
 
-</section>
+    </section>
 
-
-    </div>
-  </main>
+  </div>
+</main>
 
 </body>
 </html>
+
