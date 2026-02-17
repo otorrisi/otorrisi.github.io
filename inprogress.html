@@ -53,15 +53,26 @@
       margin-left:auto; /* THIS pushes it right */
     }
     
-    .menu a{ 
-      color:#ffffff; 
-      text-decoration:none; 
-      font-weight:300;
+    main a,
+    main a:visited{
+  color: var(--link);
+  text-decoration:none;
     }
+  
+  main a:hover{
+  text-decoration:underline;
+  }
 
-    .menu a:hover{
-      text-decoration:underline;
-    }
+  .menu a,
+  .menu a:visited{
+  color:#ffffff !important;
+  text-decoration:none;
+  font-weight:300;   /* or 400 if you prefer */
+  }
+
+  .menu a:hover{
+  text-decoration:underline;
+  }
 
     /* Hero */
     .hero{
