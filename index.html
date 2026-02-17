@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en-CA"> 
 <head> 
 <meta charset="utf-8"> 
@@ -25,6 +26,7 @@ body{
   color:var(--text); 
   background:var(--bg); 
   line-height:1.6; 
+  padding-top:60px; /* space for fixed nav */
 } 
 
 /* Blue hyperlinks in main text */ 
@@ -36,15 +38,15 @@ main a:hover{
   text-decoration:underline; 
 } 
 
-/* Navigation */ 
+/* Navigation (white banner) */ 
 .nav{ 
-  position:absolute; 
+  position:fixed; 
   top:0; 
   left:0; 
   right:0; 
   z-index:100; 
-  background:transparent; 
-  border:none; 
+  background:#ffffff; 
+  border-bottom:1px solid var(--border); 
 } 
 
 .nav-inner{ 
@@ -56,24 +58,30 @@ main a:hover{
   align-items:center; 
 } 
 
-/* ADDED: spacing between menu items */
+.brand{
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+/* spacing between menu items */
 .menu{
   display:flex;
-  gap:30px;
+  gap:40px;
+  justify-content:flex-end;
+  align-items:center;
+  flex-wrap:wrap;
 }
 
 .menu a{ 
-  color:#ffffff; 
+  color:var(--text); 
   text-decoration:none; 
-  opacity:0.9; 
+  font-weight:500;
 } 
 
 .menu a:hover{ 
-  opacity:1; 
-} 
-
-.nav-inner strong{ 
-  color:#ffffff; 
+  text-decoration:underline;
 } 
 
 /* Hero */ 
@@ -194,6 +202,7 @@ section h2{
 @media (max-width:900px){ 
   .grid{ grid-template-columns:1fr; } 
   .hero h1{ font-size:2.2rem; } 
+  body{ padding-top:70px; }
 } 
 
 .site-footer{ 
@@ -240,49 +249,51 @@ section h2{
 <body> 
 
 <nav class="nav" aria-label="Primary"> 
-<div class="nav-inner"> 
-<div class="menu"> 
-<a href="#home">Home</a> 
-<a href="publications.html">Publications</a> 
-<a href="#research">Research in progress</a> 
-<a href="#applied research"> Applied research</a> 
-<a href="#teaching">Teaching</a> 
-<a href="#contact">Contacts</a> 
-</div> 
-</div> 
+  <div class="nav-inner"> 
+    <div class="brand">Orsola Torrisi</div>
+    <div class="menu"> 
+      <a href="#home">Home</a> 
+      <a href="publications.html">Publications</a> 
+      <a href="#research">Research in progress</a> 
+      <a href="#applied-research">Applied research</a> 
+      <a href="#teaching">Teaching</a> 
+      <a href="#contact">Contacts</a> 
+    </div> 
+  </div> 
 </nav> 
 
 <header class="hero" id="home"> 
-<div> 
-<h1>Orsola Torrisi</h1> 
-<div class="subtitle">Social demographer</div> 
-<div class="affil"> 
-McGill University<br> 
-London School of Economics and Political Science (LSE) 
-</div> 
-</div> 
+  <div> 
+    <h1>Orsola Torrisi</h1> 
+    <div class="subtitle">Social demographer</div> 
+    <div class="affil"> 
+      McGill University<br> 
+      London School of Economics and Political Science (LSE) 
+    </div> 
+  </div> 
 </header> 
 
 <main class="wrap"> 
-<div class="grid"> 
+  <div class="grid"> 
 
-<aside> 
-<img class="profile" src="assets/profile.JPG.png" alt="Portrait"> 
+    <aside> 
+      <img class="profile" src="assets/profile.JPG.png" alt="Portrait"> 
 
-<a class="cv-btn" href="assets/Curriculum_Vitae_TO.pdf" target="_blank">Curriculum Vitae</a> 
+      <a class="cv-btn" href="assets/Curriculum_Vitae_TO.pdf" target="_blank">Curriculum Vitae</a> 
 
-<div class="social-icons"> 
-<a href="https://github.com/otorrisi" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a> 
-<a href="https://scholar.google.com/citations?user=lcNrzuIAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a> 
-<a href="https://orcid.org/0000-0003-1760-679X" target="_blank" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a> 
-<a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a> 
-</div> 
+      <div class="social-icons"> 
+        <a href="https://github.com/otorrisi" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a> 
+        <a href="https://scholar.google.com/citations?user=lcNrzuIAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a> 
+        <a href="https://orcid.org/0000-0003-1760-679X" target="_blank" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a> 
+        <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a> 
+      </div> 
 
-<div class="disclaimer"> 
-<strong>Disclaimer:</strong> 
-<p>I am an A.S. Roma supporter, so please... if you support Lazio, do not tell me.</p> 
-</div> 
-</aside> 
+      <div class="disclaimer"> 
+        <strong>Disclaimer:</strong> 
+        <p>I am an A.S. Roma supporter, so please... if you support Lazio, do not tell me.</p> 
+      </div> 
+    </aside>
+
 
 <section> 
 
