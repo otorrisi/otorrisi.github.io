@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Research in Progress ~ Orsola Torrisi</title>
+  <title>Research in progress ~ Orsola Torrisi</title>
 
   <style>
     :root{
@@ -35,24 +35,28 @@
       background:transparent;
     }
 
-    .nav-inner{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:14px 20px;
-      display:flex;
-      align-items:center;
-    }
-
+    .nav-inner{ 
+      max-width:var(--max); 
+      margin:0 auto; 
+      padding:14px 20px; 
+      display:flex; 
+      justify-content:space-between; 
+      align-items:center; 
+    } 
+    
     .menu{
       display:flex;
       gap:30px;
-      margin-left:auto;
+      justify-content:flex-end;
+      align-items:center;
+      flex-wrap:wrap;
+      margin-left:auto; /* THIS pushes it right */
     }
-
-    .menu a{
-      color:#ffffff;
-      text-decoration:none;
-      font-weight:400;
+    
+    .menu a{ 
+      color:#ffffff; 
+      text-decoration:none; 
+      font-weight:300;
     }
 
     .menu a:hover{
@@ -87,8 +91,8 @@
 
     h2{
       margin:30px 0 10px 0;
-      font-size:1.1rem;
-      font-weight:700;
+      font-size:1.5rem;
+      font-weight:500;
     }
 
     p{
@@ -100,11 +104,21 @@
     }
 
     .item{
-      margin-bottom:12px;
+      margin-bottom:35px;
     }
 
     .muted{
       color:var(--muted);
+    }
+    
+    a,
+    a:visited{
+      color: var(--link);
+      text-decoration:none;
+    }
+    
+    a:hover{
+      text-decoration:underline;
     }
 
   </style>
@@ -126,7 +140,7 @@
 </nav>
 
 <header class="hero">
-  <h1>Research in Progress</h1>
+  <h1>Research in progress</h1>
 </header>
 
 <main>
