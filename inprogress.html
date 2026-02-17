@@ -35,59 +35,58 @@
       background:transparent;
     }
 
-    .nav-inner{ 
-      max-width:var(--max); 
-      margin:0 auto; 
-      padding:14px 20px; 
-      display:flex; 
-      justify-content:space-between; 
-      align-items:center; 
-    } 
-    
+    .nav-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
     .menu{
       display:flex;
       gap:30px;
       justify-content:flex-end;
       align-items:center;
       flex-wrap:wrap;
-      margin-left:auto; /* THIS pushes it right */
+      margin-left:auto;
     }
-    
+
     main a,
     main a:visited{
-  color: var(--link);
-  text-decoration:none;
+      color: var(--link);
+      text-decoration:none;
     }
-  
-  main a:hover{
-  text-decoration:underline;
-  }
 
-  .menu a,
-  .menu a:visited{
-  color:#ffffff !important;
-  text-decoration:none;
-  font-weight:300;   /* or 400 if you prefer */
-  }
+    main a:hover{
+      text-decoration:underline;
+    }
 
-  .menu a:hover{
-  text-decoration:underline;
-  }
+    .menu a,
+    .menu a:visited{
+      color:#ffffff !important;
+      text-decoration:none;
+      font-weight:300;
+    }
 
+    .menu a:hover{
+      text-decoration:underline;
+    }
 
     /* Hero */
-    .hero{ 
-        min-height:45vh; 
-        display:flex; 
-        align-items:center; 
-        justify-content:center; 
-        text-align:center; 
-        color:#ffffff; 
-        padding:90px 20px 60px 20px; 
-        background: 
-          linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
-          url("assets/banner.jpg") center/cover no-repeat; 
-      } 
+    .hero{
+      min-height:45vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#ffffff;
+      padding:90px 20px 60px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("assets/banner.jpg") center/cover no-repeat;
+    }
 
     .hero h1{
       margin:0;
@@ -101,20 +100,11 @@
       padding:40px 20px 60px 20px;
     }
 
-   .section h2{
-  margin-top:0;
-}
-
-.pub-list{
-  list-style:disc;
-  margin:10px 0 0 18px;
-  padding:0;
-}
-
-    .pub-list{
-  list-style:disc;
-  margin-left:18px;
-}
+    h2{
+      margin:30px 0 10px 0;
+      font-size:1.5rem;
+      font-weight:500;
+    }
 
     p{
       margin:0 0 12px 0;
@@ -131,56 +121,57 @@
     .muted{
       color:var(--muted);
     }
-    
+
     a,
     a:visited{
       color: var(--link);
       text-decoration:none;
     }
-    
+
     a:hover{
       text-decoration:underline;
     }
-   
+
     .pub-list li{
-    margin-bottom:12px;   /* increase this value */
+      margin-bottom:12px;
     }
-.site-footer{ 
-  margin-top:30px; 
-  padding:30px 20px; 
-  background:#f3f4f6; 
-  border-top:1px solid var(--border); 
-} 
 
-.footer-inner{
-  max-width:var(--max);
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  gap:40px;           /* controls spacing */
-}
+    .site-footer{
+      margin-top:30px;
+      padding:30px 20px;
+      background:#f3f4f6;
+      border-top:1px solid var(--border);
+    }
 
-.footer-logos img{ 
-  height:55px; 
-  width:auto; 
-} 
+    .footer-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      gap:40px;
+    }
 
-.footer-logos{ 
-  display:flex; 
-  align-items:center; 
-  gap:40px; 
-} 
+    .footer-logos img{
+      height:55px;
+      width:auto;
+    }
 
-.footer-contacts h3{ 
-  margin:0 0 6px 0; 
-  font-size:0.95rem; 
-} 
+    .footer-logos{
+      display:flex;
+      align-items:center;
+      gap:40px;
+    }
 
-.footer-contacts p{ 
-  margin:4px 0; 
-  font-size:0.85rem; 
-  line-height:1.3; 
-} 
+    .footer-contacts h3{
+      margin:0 0 6px 0;
+      font-size:0.95rem;
+    }
+
+    .footer-contacts p{
+      margin:4px 0;
+      font-size:0.85rem;
+      line-height:1.3;
+    }
   </style>
 </head>
 
@@ -202,68 +193,59 @@
 <header class="hero">
   <h1>Research in progress</h1>
 </header>
-<main>
 
 <main>
+  <h2>Armed conflict, shocks, family outcomes and reproductive health</h2>
+  <ul class="pub-list">
+    <li>“The impact of local violent crime on maternal mortality and morbidity in Mexico” with Svallfors, S. and Caudillo, M.</li>
+    <li>“Exposure to local violent crime and abortion, miscarriage, and stillbirth in Mexico” with Svallfors, S. and Caudillo, M.</li>
+    <li>“Inflation experience and fertility outcomes” with Özcan, B.</li>
+    <li>“Multiple uncertainties and fertility intentions in a high fertility context” with Sieverding, M.</li>
+    <li>“Violence and adolescent fertility: Global trends and regional divergence” with Omenti, R. and Köksal, S.</li>
+    <li>“The societal consequences of war. Social science perspectives, lessons from Ukraine, and a new sociological agenda” with Gerber, T. and Brick, T.</li>
+    <li>“Towards a Demography of Crisis and Resilience” with Abbasi-Shavazi, M.J., Hoffmann, R., Nitsche, N., Turra, C. and Aassve, A.</li>
+    <li>“Ethical guidelines for conducting research in war settings: Is there a consensus in the literature?” with Mateo, E., Williams, N., Hagopian, A. and Buckley, C.</li>
+  </ul>
 
-  <div class="section">
-    <h2>Armed conflict, shocks, family outcomes and reproductive health</h2>
-    <ul class="pub-list">
-      <li>“The impact of local violent crime on maternal mortality and morbidity in Mexico” with Svallfors, S. and Caudillo, M.</li>
-      <li>“Exposure to local violent crime and abortion, miscarriage, and stillbirth in Mexico” with Svallfors, S. and Caudillo, M.</li>
-      <li>“Inflation experience and fertility outcomes” with Özcan, B.</li>
-      <li>“Multiple uncertainties and fertility intentions in a high fertility context” with Sieverding, M.</li>
-      <li>“Violence and adolescent fertility: Global trends and regional divergence” with Omenti, R. and Köksal, S.</li>
-      <li>“The societal consequences of war. Social science perspectives, lessons from Ukraine, and a new sociological agenda” with Gerber, T. and Brick, T.</li>
-      <li>“Towards a Demography of Crisis and Resilience” with Abbasi-Shavazi, M.J., Hoffmann, R., Nitsche, N., Turra, C. and Aassve, A.</li>
-      <li>“Ethical guidelines for conducting research in war settings: Is there a consensus in the literature?” with Mateo, E., Williams, N., Hagopian, A. and Buckley, C.</li>
-    </ul>
-  </div>
+  <h2>Family formation, relationships and maternal health outcomes</h2>
+  <ul class="pub-list">
+    <li>“Drivers of urban-rural disparities in pregnancy complications in Mexico” with Köksal, S., Gazeley, U. and Svallfors, S.</li>
+    <li>“Pregnancy complications and fertility intentions” with Köksal, S., Gazeley, U. and Svallfors, S.</li>
+    <li>“The changing landscape of intergenerational marriage norms in urban India” with Pesando, L.M., Kornrich, S. and Sarkar, K.</li>
+    <li>“The (unintended) consequences of changing the legality of polygyny” with Pesando, L.M., Wu, H. and Batyra, E.</li>
+  </ul>
 
-  <div class="section">
-    <h2>Family formation, relationships and maternal health outcomes</h2>
-    <ul class="pub-list">
-      <li>“Drivers of urban-rural disparities in pregnancy complications in Mexico” with Köksal, S., Gazeley, U. and Svallfors, S.</li>
-      <li>“Pregnancy complications and fertility intentions” with Köksal, S., Gazeley, U. and Svallfors, S.</li>
-      <li>“The changing landscape of intergenerational marriage norms in urban India” with Pesando, L.M., Kornrich, S. and Sarkar, K.</li>
-      <li>“The (unintended) consequences of changing the legality of polygyny” with Pesando, L.M., Wu, H. and Batyra, E.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Registration of vital events</h2>
-    <ul class="pub-list">
-      <li>“Wealth disparities in marriage registration in Africa” with Helleringer, S., Iwo, R. and Hipolito, H.</li>
-      <li>“Conflict, displacement, and marriage documentation in Yemen: Insights from survey data” with Elnakib, S., Zimmerman, L., Amani-Chakani, M., Attal, B. and Robinson, C.</li>
-      <li>“Registration of family vital events in a conflict-induced displacement setting” with Elnakib, S., Zimmerman, L., Hussain, T. and Robinson, C.</li>
-    </ul>
-  </div>
-
+  <h2>Registration of vital events</h2>
+  <ul class="pub-list">
+    <li>“Wealth disparities in marriage registration in Africa” with Helleringer, S., Iwo, R. and Hipolito, H.</li>
+    <li>“Conflict, displacement, and marriage documentation in Yemen: Insights from survey data” with Elnakib, S., Zimmerman, L., Amani-Chakani, M., Attal, B. and Robinson, C.</li>
+    <li>“Registration of family vital events in a conflict-induced displacement setting” with Elnakib, S., Zimmerman, L., Hussain, T. and Robinson, C.</li>
+  </ul>
 </main>
 
+<footer class="site-footer">
+  <div class="footer-inner">
 
-<footer class="site-footer"> 
-<div class="footer-inner"> 
+    <div class="footer-logos">
+      <img src="assets/mcgill_logo.png" alt="McGill University">
+      <img src="assets/lse_logo.png" alt="LSE">
+    </div>
 
-<div class="footer-logos"> 
-<img src="assets/mcgill_logo.png" alt="McGill University"> 
-<img src="assets/lse_logo.png" alt="LSE"> 
-</div> 
+    <div class="footer-contacts">
+      <h3>Contacts</h3>
+      <p>
+        <a href="mailto:orsola.torrisi@mcgill.ca">orsola.torrisi@mcgill.ca</a>
+        McGill University, McTavish Street, Montreal H3A 0G4
+      </p>
+      <p>
+        <a href="mailto:o.torrisi@lse.ac.uk">o.torrisi@lse.ac.uk</a>
+        London School of Economics, Houghton Street, London WC2A 2AE
+      </p>
+    </div>
 
-<div class="footer-contacts"> 
-<h3>Contacts</h3> 
-<p> 
-<a href="mailto:orsola.torrisi@mcgill.ca">orsola.torrisi@mcgill.ca</a> 
-McGill University, McTavish Street, Montreal H3A 0G4 
-</p> 
-<p> 
-<a href="mailto:o.torrisi@lse.ac.uk">o.torrisi@lse.ac.uk</a> 
-London School of Economics, Houghton Street, London WC2A 2AE 
-</p> 
-</div> 
+  </div>
+</footer>
 
-</div> 
-</footer> 
-
-</body> 
+</body>
 </html>
+
